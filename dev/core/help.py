@@ -16,4 +16,4 @@ def universe_selector(uname):
     package = "universes.{0}".format(uname)
     module = importlib.import_module('.master', package)
 
-    return module.Universe()
+    return module.Universe(module.particle_list)

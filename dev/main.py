@@ -1,6 +1,7 @@
 import sys
 import getopt
-from core.apps import Eye
+from tkinter import Tk
+from core.apps import App
 import core.help as h
 
 def main():
@@ -25,9 +26,10 @@ def main():
         print(err)
         sys.exit(2)
 
-    app = Eye()
+    root = Tk()
+    app = App(root)
     app.watch(universe)
-    app.mainloop()
+    root.mainloop()
 
 if __name__ == '__main__':
     main()
